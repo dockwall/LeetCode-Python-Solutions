@@ -15,9 +15,9 @@ Input: jewels = "z", stones = "ZZ"
 Output: 0
 
 Constraints:
-1 <= jewels.length, stones.length <= 50
-jewels and stones consist of only English letters.
-All the characters of jewels are unique.
+1)1 <= jewels.length, stones.length <= 50
+2)jewels and stones consist of only English letters.
+3)All the characters of jewels are unique.
 """
 
 

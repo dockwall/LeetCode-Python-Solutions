@@ -17,9 +17,9 @@ Input: nums = [1,1,2,2], n = 2
 Output: [1,2,1,2]
 
 Constraints:
-1 <= n <= 500
-nums.length == 2n
-1 <= nums[i] <= 10^3
+1)1 <= n <= 500
+2)nums.length == 2n
+3)1 <= nums[i] <= 10^3
 """
 
 

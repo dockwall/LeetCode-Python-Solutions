@@ -19,8 +19,8 @@ Input: nums = [1,2,3]
 Output: 0
 
 Constraints:
-1 <= nums.length <= 100
-1 <= nums[i] <= 100
+1)1 <= nums.length <= 100
+2)1 <= nums[i] <= 100
 """
 
 nums1 = [1, 2, 3, 1, 1, 3]  # First example
