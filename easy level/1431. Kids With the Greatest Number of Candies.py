@@ -37,24 +37,31 @@ Constraints:
 
 
 def kidsWithCandies(candies, extraCandies):
-    max_without_extras = 0  # The biggest quantity of candies
+    max_without_extras = 0               # The biggest quantity of candies
     for kid in candies:
         if max_without_extras < kid:
             max_without_extras = kid
         else:
             continue
+
 # I don't use 'max()' function because I try to make def without system functions.
 # If you want to simplify this code, you may use 'max(candies)' instead calculate 'max_without_extras'
-    output_list = []  # Output bool List
-    for kid in candies:  # Loop with branching for processing every kid with candies
+
+    output_list = []                     # Output bool List
+    for kid in candies:                  # Loop with branching for processing every kid with candies
         if max_without_extras <= (kid + extraCandies):
-            output_list.append(True)  # If kid's candies with extra candies >= the biggest candies - True
+            output_list.append(True)     # If kid's candies with extra candies >= the biggest candies - True
         else:
-            output_list.append(False)  # If kid's candies with extra candies < the biggest candies - False
+            output_list.append(False)    # If kid's candies with extra candies < the biggest candies - False
 
     return output_list
 
 
-print('First example:', kidsWithCandies([2, 3, 5, 1, 3], 3))  # First example
-print('Second example:', kidsWithCandies([4, 2, 1, 1, 2], 1))  # Second example
-print('Third example:', kidsWithCandies([12, 1, 12], 10))  # Third example
+# First example
+print('First example:', kidsWithCandies([2, 3, 5, 1, 3], 3), '\n')
+
+# Second example
+print('Second example:', kidsWithCandies([4, 2, 1, 1, 2], 1), '\n')
+
+# Third example
+print('Third example:', kidsWithCandies([12, 1, 12], 10))

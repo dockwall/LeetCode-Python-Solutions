@@ -15,13 +15,13 @@ Constraints:
 The given address is a valid IPv4 address.
 """
 
-address1 = "1.1.1.1"  # First example
-address2 = "255.100.50.0"  # Second example
+address1 = "1.1.1.1"                              # First example
+address2 = "255.100.50.0"                         # Second example
 
 
 def defangIPaddr(address):
     output_address = address.replace('.', '[.]')  # Using the .replace method to replace with a template
-    return output_address  # Return output string
+    return output_address
 
 
 print('Initial address 1:', address1)

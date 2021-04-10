@@ -23,23 +23,25 @@ Constraints:
 2)1 <= nums[i] <= 100
 """
 
-nums1 = [1, 2, 3, 1, 1, 3]  # First example
-nums2 = [1, 1, 1, 1]  # Second example
-nums3 = [1, 2, 3]  # Third example
+nums1 = [1, 2, 3, 1, 1, 3]         # First example
+nums2 = [1, 1, 1, 1]               # Second example
+nums3 = [1, 2, 3]                  # Third example
 
 
 def numIdenticalPairs(nums):
-    quantity = 0  # Output variable defining quantity of good pairs
-    current_second_index = 1  # lower bound of right piece current index (more by one)
-    for element in nums:  # Loop iterating over numbers (left piece of pair)
+    quantity = 0                   # Output variable defining quantity of good pairs
+    current_second_index = 1       # Lower bound of right piece current index (more by one)
+    for element in nums:           # Loop iterating over numbers (left piece of pair)
         for j in range(current_second_index, len(nums)):
+
             # Nested loop iterating over all "j" (right piece's index) for each number (left piece)
             # Lower bound - 1 for the first element (i == 0), increases by one for the next element
             # Upper bound - length of input List ("range()" func doesn't take the last element)
+
             if element == nums[j]:
-                quantity += 1  # "element" - left peace of pair, "nums[j]" - right piece of pair
+                quantity += 1      # "element" - left peace of pair, "nums[j]" - right piece of pair
             else:
-                continue  # if not, continue with next "j" (right piece's index)
+                continue           # If not, continue with next "j" (right piece's index)
         current_second_index += 1  # Increase lower bound by 1 for next iteration over
     return quantity
 

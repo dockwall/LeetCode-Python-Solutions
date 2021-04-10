@@ -22,18 +22,20 @@ Constraints:
 
 
 def numJewelsInStones(jewels, stones):
-    quantity = 0  # Output variable defining quantity of jewels in stones
-    for jewel in jewels:  # Loop iterating over jewel
-        for stone in stones:  # Nested loop iterating over all stones for each jewel
+    quantity = 0                          # Output variable defining quantity of jewels in stones
+    for jewel in jewels:                  # Loop iterating over jewel
+        for stone in stones:              # Nested loop iterating over all stones for each jewel
             if jewel == stone:
-                quantity += 1  # Calculate quantity
+                quantity += 1             # Calculate quantity
             else:
                 continue
     return quantity
 
 
+# First example
 print('First Example. Jewels = "aA", stones = "aAAbbbb"')
-print('Quantity of Jewels:', numJewelsInStones('aA', 'aAAbbbb'), '\n')  # First example
+print('Quantity of Jewels:', numJewelsInStones('aA', 'aAAbbbb'), '\n')
 
+# Second example
 print('Second Example. Jewels = "z", stones = "ZZ"')
-print('Quantity of Jewels:', numJewelsInStones('z', 'ZZ'))  # Second example
+print('Quantity of Jewels:', numJewelsInStones('z', 'ZZ'))

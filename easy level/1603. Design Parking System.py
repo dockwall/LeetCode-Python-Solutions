@@ -43,29 +43,29 @@ Constraints:
 
 
 class ParkingSystem:
-    def __init__(self, big, medium, small):  # class Constructor
+    def __init__(self, big, medium, small):  # Class Constructor
         self.big = big
         self.medium = medium
         self.small = small
 
-    def addCar(self, carType):  # class Method
-        if carType == 1:  # if carType - big(1):
-            if self.big == 0:  # if there is no place for a car:
+    def addCar(self, carType):               # Class Method
+        if carType == 1:                     # If carType - big(1):
+            if self.big == 0:                # If there is no place for a car:
                 return False
-            else:  # if there is a place for a car:
-                self.big -= 1  # take one big place
+            else:                            # If there is a place for a car:
+                self.big -= 1                # Take one big place
                 return True
-        elif carType == 2:  # if carType - medium(2):
-            if self.medium == 0:  # if there is no place for a car:
+        elif carType == 2:                   # If carType - medium(2):
+            if self.medium == 0:             # If there is no place for a car:
                 return False
-            else:  # if there is a place for a car:
-                self.medium -= 1  # take one medium place
+            else:                            # If there is a place for a car:
+                self.medium -= 1             # Take one medium place
                 return True
-        elif carType == 3:  # if carType - small(3):
-            if self.small == 0:  # if there is no place for a car:
+        elif carType == 3:                   # If carType - small(3):
+            if self.small == 0:              # If there is no place for a car:
                 return False
-            else:  # if there is a place for a car:
-                self.small -= 1  # take one small place
+            else:                            # If there is a place for a car:
+                self.small -= 1              # Take one small place
                 return True
 
 
@@ -74,21 +74,21 @@ class ParkingSystem:
 # param_1 = obj.addCar(carType)
 
 
-output_list = []  # our bool List
+output_list = []                             # Bool List
 
-obj = ParkingSystem(1, 1, 0)  # Example parking lot
+obj = ParkingSystem(1, 1, 0)                 # Example parking lot
 output_list.append(None)
 
-param1 = obj.addCar(1)  # Example first car
+param1 = obj.addCar(1)                       # Example first car
 output_list.append(param1)
 
-param2 = obj.addCar(2)  # Example second car
+param2 = obj.addCar(2)                       # Example second car
 output_list.append(param2)
 
-param3 = obj.addCar(3)  # Example third car
+param3 = obj.addCar(3)                       # Example third car
 output_list.append(param3)
 
-param4 = obj.addCar(1)  # Example fourth car
+param4 = obj.addCar(1)                       # Example fourth car
 output_list.append(param4)
 
 print(output_list)

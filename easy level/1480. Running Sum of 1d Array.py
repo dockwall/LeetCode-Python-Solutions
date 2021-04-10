@@ -22,16 +22,16 @@ Constraints:
 2) -10^6 <= nums[i] <= 10^6
 """
 
-nums1 = [1, 2, 3, 4]  # First example
-nums2 = [1, 1, 1, 1, 1]  # Second example
-nums3 = [3, 1, 2, 10, 1]  # Third example
+nums1 = [1, 2, 3, 4]                      # First example
+nums2 = [1, 1, 1, 1, 1]                   # Second example
+nums3 = [3, 1, 2, 10, 1]                  # Third example
 
 
 def running_sum(array):
-    output_array = []  # create empty List for output
-    current_sum = 0  # create variable that contains summary of previous elements in our List
-    for element in array:  # This loop iterates over each element in our List
-        current_sum += element  # Add the current element to the sum of the previous ones
+    output_array = []                     # Create empty List for output
+    current_sum = 0                       # Create variable that contains summary of previous elements
+    for element in array:                 # This loop iterates over each element in our List
+        current_sum += element            # Add the current element to the sum of the previous ones
         output_array.append(current_sum)  # Append current summary to List for output
     return output_array
 

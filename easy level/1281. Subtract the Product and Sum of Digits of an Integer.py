@@ -23,28 +23,33 @@ Constraints:
 1 <= n <= 10^5
 """
 
-number1 = 234  # First example
+number1 = 234                          # First example
+number2 = 4421                         # Second example
+
 
 # If you want to simplify this code, you can use "map()" system function
-
 def subtractProductAndSum(n):
-    func_string = str(n)  # Change "int" type to "str"
-    func_list = []  # Create empty list for function
+    func_string = str(n)               # Change "int" type to "str"
+    func_list = []                     # Create empty list for function
 
-    for text_number in func_string:  # iterating over elements in string number
-        int_number = int(text_number)  # convert each element to "int" type
-        func_list.append(int_number)  # add each "int" type element in list
+    for text_number in func_string:    # Iterating over elements in string number
+        int_number = int(text_number)  # Convert each element to "int" type
+        func_list.append(int_number)   # Add each "int" type element in list
 
-    product = 1  # default product
+    product = 1                        # Default product
     for number in func_list:
-        product *= number  # multiply all numbers
+        product *= number              # Multiply all numbers
 
     summary = 0
     for number in func_list:
-        summary += number  # add all numbers
+        summary += number              # Add all numbers
 
-    output = product - summary  # difference between product and summary
+    output = product - summary         # Difference between product and summary
     return output
 
 
-print(subtractProductAndSum(number1))
+print('First number:', number1)
+print('Product of Subtract and Sum:', subtractProductAndSum(number1), '\n')
+
+print('Second number:', number2)
+print('Product of Subtract and Sum:', subtractProductAndSum(number2))

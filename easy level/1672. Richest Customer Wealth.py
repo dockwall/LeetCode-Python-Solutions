@@ -34,21 +34,21 @@ Constraints:
 4)1 <= accounts[i][j] <= 100
 """
 
-accounts1 = [[1, 2, 3], [3, 2, 1]]  # First example
-accounts2 = [[1, 5], [7, 3], [3, 5]]  # Second example
+accounts1 = [[1, 2, 3], [3, 2, 1]]             # First example
+accounts2 = [[1, 5], [7, 3], [3, 5]]           # Second example
 accounts3 = [[2, 8, 7], [7, 1, 3], [1, 9, 5]]  # Third example
 
 
 def maximumWealth(accounts):
-    biggest_wealth = 0  # Variable for the biggest customer's wealth
-    for i in accounts:  # loop to iterate over customers
-        customer_wealth = 0  # Variable for the wealth of current customer
-        for j in i:  # loop to iterate over banks in the current customer
-            customer_wealth += j  # count the amount
-        if biggest_wealth < customer_wealth:  # If the current consumer has more money -
-            biggest_wealth = customer_wealth  # - rewrite the biggest wealth
+    biggest_wealth = 0                         # Variable for the biggest customer's wealth
+    for i in accounts:                         # Loop to iterate over customers
+        customer_wealth = 0                    # Variable for the wealth of current customer
+        for j in i:                            # Loop to iterate over banks in the current customer
+            customer_wealth += j               # Count the amount
+        if biggest_wealth < customer_wealth:   # If the current consumer has more money -
+            biggest_wealth = customer_wealth   # Then rewrite the biggest wealth
         else:
-            continue  # If not - go to the next customer
+            continue                           # If not - go to the next customer
     return biggest_wealth
 
 

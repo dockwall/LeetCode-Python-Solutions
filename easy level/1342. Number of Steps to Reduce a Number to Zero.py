@@ -31,18 +31,18 @@ Constraints:
 0 <= num <= 10^6
 """
 
-num1 = 14  # First example
-num2 = 8  # Second example
-num3 = 123  # Third example
+num1 = 14                      # First example
+num2 = 8                       # Second example
+num3 = 123                     # Third example
 
 
 def numberOfSteps(num):
-    steps = 0  # quantity of steps
-    while num != 0:  # while "num" is not 0
-        if num % 2 == 0:  # if "num" is even, divide "num" by 2 and increase "steps" by 1
+    steps = 0                  # Quantity of steps
+    while num != 0:            # While "num" is not 0
+        if num % 2 == 0:       # If "num" is even, divide "num" by 2 and increase "steps" by 1
             num /= 2
             steps += 1
-        else:  # if "num" is odd, decrease "num" by 1 and increase "steps" by 1
+        else:                  # If "num" is odd, decrease "num" by 1 and increase "steps" by 1
             num -= 1
             steps += 1
     return steps
@@ -54,5 +54,5 @@ print('Number of steps to reduce to zero:', numberOfSteps(num1), '\n')
 print('Second number:', num2)
 print('Number of steps to reduce to zero:', numberOfSteps(num2), '\n')
 
-print('Third number:', num2)
-print('Number of steps to reduce to zero:', numberOfSteps(num3), '\n')
+print('Third number:', num3)
+print('Number of steps to reduce to zero:', numberOfSteps(num3))

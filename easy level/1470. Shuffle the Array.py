@@ -24,30 +24,36 @@ Constraints:
 
 
 def shuffle(nums, n):
-    output_array = []  # output List
-    iteration = 1  # variable defining iteration
-    second_index = n  # variable defining index y[]
-    for element in nums:  # loop iterating over x[]
+    output_array = []               # Output List
+    iteration = 1                   # Variable defining iteration
+    second_index = n                # Variable defining index y[]
+    for element in nums:            # loop iterating over x[]
         if iteration <= n:
-            # variable "n" shows the quantity of x-y pairs
-            # one iteration appends one x-y pair
-            # last iteration = last pair
-            # each iteration increases index of "y" and iteration number by 1
+
+            # Variable "n" shows the quantity of x-y pairs
+            # One iteration appends one x-y pair
+            # Last iteration = last pair
+            # Each iteration increases index of "y" and iteration number by 1
+            # When iteration > quantity of x-y pairs - return output List
+
             output_array.append(element)
             output_array.append(nums[second_index])
             second_index += 1
             iteration += 1
         else:
-            # when iteration > quantity of x-y pairs - return output List
+
             return output_array
 
 
+# First example
 print('First array: [2, 5, 1, 3, 4, 7], n = 3')
-print('Output array:', shuffle([2, 5, 1, 3, 4, 7], 3), '\n')  # First example
+print('Output array:', shuffle([2, 5, 1, 3, 4, 7], 3), '\n')
 
+# Second example
 print('Second array: nums = [1, 2, 3, 4, 4, 3, 2, 1], n = 4')
-print('Output array:', shuffle([1, 2, 3, 4, 4, 3, 2, 1], 4), '\n')  # Second example
+print('Output array:', shuffle([1, 2, 3, 4, 4, 3, 2, 1], 4), '\n')
 
+# Third example
 print('Third array: [1, 1, 2, 2], n = 2')
-print('Output array:', shuffle([1, 1, 2, 2], 2))  # Third example
+print('Output array:', shuffle([1, 1, 2, 2], 2))
 
